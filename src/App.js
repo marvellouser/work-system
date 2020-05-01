@@ -12,6 +12,7 @@ function App() {
     <Router>
       <Route path="/" exact component={A} />
       <Route path="/B" component={B} />
+      <div>11111</div>
     </Router>
   )
 }

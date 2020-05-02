@@ -1,5 +1,5 @@
 import React from 'react'
-import './head.scss'
+import './style.scss'
 export default class Head extends React.PureComponent {
   render() {
     const { history } = this.props

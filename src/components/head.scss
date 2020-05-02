@@ -1,0 +1,48 @@
+.head-wrap {
+  background-color: #fff;
+
+  .head-con {
+    width: 1050px;
+    height: 86px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    .logo-wrap {
+      width: 266px;
+      height: 65px;
+      margin-right: 21px;
+      cursor: pointer;
+      .logo {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .menu {
+      display: flex;
+      .item {
+        padding: 0 10px 10px;
+        font-size: 13px;
+        color: #000;
+        cursor: pointer;
+      }
+      .item:hover {
+        color: #003894;
+      }
+    }
+
+    .phone-wrap {
+      margin-left: 10px;
+      width: 160px;
+      height: 65px;
+      cursor: pointer;
+    }
+  }
+
+  .head-bottom {
+    height: 11px;
+    background-color: rgb(242, 248, 250);
+  }
+}

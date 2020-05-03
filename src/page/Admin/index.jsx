@@ -2,6 +2,10 @@ import React from 'react'
 
 export default class Admin extends React.PureComponent {
   render() {
-    return <div>首页11112222</div>
+    return <div>首页11112222
+      <div>
+
+      </div>
+    </div>
   }
 }

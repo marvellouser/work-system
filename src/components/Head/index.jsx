@@ -26,7 +26,7 @@ export default class Head extends React.PureComponent {
         name: "销售与服务",
       },
       {
-        path: "/human",
+        path: "/human/joinus",
         name: "人力资源",
       },
       {
@@ -59,7 +59,11 @@ export default class Head extends React.PureComponent {
             <img src="http://www.kofler.com.cn/images/tel.jpg" alt="phone" />
           </div>
         </div>
-        <div className="head-bottom"></div>
+        <img
+          className="head-bottom"
+          src="http://www.kofler.com.cn/images/topline.png"
+          alt=""
+        />
       </div>
     );
   }

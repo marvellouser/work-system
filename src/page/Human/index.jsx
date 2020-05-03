@@ -1,7 +1,9 @@
 import React from "react";
 import Layout from "../../components/Layout";
-// import "./style.scss";
+import { Route } from "react-router-dom";
 import Menu from "../../components/Menu/index";
+import Hr from "./components/Hr";
+import Joinus from "./components/Joinus";
 export default class About extends React.PureComponent {
   render() {
     const menus = [
@@ -17,11 +19,16 @@ export default class About extends React.PureComponent {
     return (
       <Layout
         left={() => (
-          <div className="about-left">
+          <div className="human-left">
             <Menu menus={menus} />
           </div>
         )}
-        right={() => <div className="about-right">人力资源</div>}
+        right={() => (
+          <div className="human-right">
+            <Route path="/human/joinus" component={Joinus} />
+            <Route path="/human/hr" component={Hr} />
+          </div>
+        )}
         history={this.props.history}
       />
     );

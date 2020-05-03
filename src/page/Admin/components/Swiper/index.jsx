@@ -13,9 +13,7 @@ export default class Swiper extends React.PureComponent {
   };
   timer = null;
   componentDidMount() {
-    this.timer = setInterval(() => {
-      this.autoMove();
-    }, 2000);
+    this.autoMove();
   }
   componentWillUnmount() {
     clearInterval(this.timer);
@@ -48,9 +46,7 @@ export default class Swiper extends React.PureComponent {
             });
           }}
           onMouseLeave={() => {
-            this.timer = setInterval(() => {
-              this.autoMove();
-            }, 2000);
+            this.autoMove();
           }}
         >
           <img className="swiper__img-control-item-img" src={img} alt="" />
@@ -65,16 +61,16 @@ export default class Swiper extends React.PureComponent {
     );
   }
   autoMove = () => {
-    const { swiperArr } = this.props;
-    const { imgIndex } = this.state;
-    console.log(1111111111111111);
-    let newImgIndex = imgIndex + 1;
-    if (imgIndex === swiperArr.length - 1) {
-      newImgIndex = 0;
-    }
-    console.log(newImgIndex, "..............");
-    this.setState({
-      imgIndex: newImgIndex,
-    });
+    this.timer = setInterval(() => {
+      const { swiperArr } = this.props;
+      const { imgIndex } = this.state;
+      let newImgIndex = imgIndex + 1;
+      if (imgIndex === swiperArr.length - 1) {
+        newImgIndex = 0;
+      }
+      this.setState({
+        imgIndex: newImgIndex,
+      });
+    }, 3500);
   };
 }

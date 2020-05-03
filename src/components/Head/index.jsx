@@ -26,7 +26,7 @@ export default class Head extends React.PureComponent {
         name: "销售与服务",
       },
       {
-        path: "/human",
+        path: "/human/joinus",
         name: "人力资源",
       },
       {

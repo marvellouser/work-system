@@ -1,7 +1,16 @@
 import React from 'react'
-
+import Layout from '../../components/Layout'
 export default class About extends React.PureComponent {
   render() {
-    return <div>关于页面关于页面</div>
+    return (
+      <Layout 
+        left={
+          <div>1111</div>
+        }
+        right={
+          <div>22222</div>
+        }
+      />
+    )
   }
 }

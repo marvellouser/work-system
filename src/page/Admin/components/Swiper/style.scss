@@ -1,0 +1,41 @@
+.swiper {
+  position: relative;
+  margin: 0 auto;
+  width: 1365px;
+  height: 440px;
+  &__img {
+    position: relative;
+    &-item {
+      position: absolute;
+      width: 1365px;
+      height: 442px;
+      transition: all 1s;
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__img-control {
+    position: absolute;
+    width: 300px;
+    height: 29px;
+    display: flex;
+    bottom: 50px;
+    right: 100px;
+    &-item {
+      width: 67px;
+      height: 25px;
+      border: 2px solid #000;
+      cursor: pointer;
+      margin: 0 2px;
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-item-active {
+      border-color: #1492f0;
+    }
+  }
+}

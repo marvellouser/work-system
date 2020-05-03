@@ -1,7 +1,10 @@
 import React from "react";
 import Layout from "../../components/Layout";
-// import "./style.scss";
 import Menu from "../../components/Menu/index";
+import { Route } from "react-router-dom";
+import Company from "./components/Company";
+import SubNews from "./components/News";
+
 export default class About extends React.PureComponent {
   render() {
     const menus = [
@@ -21,11 +24,16 @@ export default class About extends React.PureComponent {
     return (
       <Layout
         left={() => (
-          <div className="about-left">
+          <div className="news-left">
             <Menu menus={menus} />
           </div>
         )}
-        right={() => <div className="about-right">新闻中心</div>}
+        right={() => (
+          <div className="news-right">
+            <Route path="/news/company" component={Company} />
+            <Route path="/news/news" component={SubNews} />
+          </div>
+        )}
         history={this.props.history}
       />
     );

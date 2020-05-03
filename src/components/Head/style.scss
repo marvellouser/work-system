@@ -1,9 +1,8 @@
 .head-wrap {
   background-color: #fff;
-
   .head-con {
     width: 1050px;
-    height: 86px;
+    height: 85px;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
@@ -30,7 +29,8 @@
   }
 
   .head-bottom {
+    width: 100%;
     height: 11px;
-    background-color: rgb(242, 248, 250);
+    vertical-align: bottom;
   }
 }

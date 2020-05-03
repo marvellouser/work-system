@@ -1,8 +1,12 @@
 import React from "react";
 import Layout from "../../components/Layout";
-// import "./style.scss";
 import Menu from "../../components/Menu/index";
-export default class About extends React.PureComponent {
+import { Route } from "react-router-dom";
+import Domestic from "./components/Domestic";
+import International from "./components/International";
+import Agent from "./components/Agent";
+
+export default class SellAndServer extends React.PureComponent {
   render() {
     const menus = [
       {
@@ -21,11 +25,20 @@ export default class About extends React.PureComponent {
     return (
       <Layout
         left={() => (
-          <div className="about-left">
+          <div className="sellandserver-left">
             <Menu menus={menus} />
           </div>
         )}
-        right={() => <div className="about-right">销售服务页面</div>}
+        right={() => (
+          <div className="sellandserver-right">
+            <Route path="/sellandserver/domestic" component={Domestic} />
+            <Route
+              path="/sellandserver/international"
+              component={International}
+            />
+            <Route path="/sellandserver/agent" component={Agent} />
+          </div>
+        )}
         history={this.props.history}
       />
     );

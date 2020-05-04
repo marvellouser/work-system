@@ -32,12 +32,12 @@ export default class Swiper extends React.PureComponent {
         </li>
       );
     });
-    const samllImg = swiperArr.map((img, index) => {
+    const smallImg = swiperArr.map((img, index) => {
       return (
         <li
           className={`swiper__img-control-item ${
             imgIndex === index ? "swiper__img-control-item-active" : ""
-          }`}
+            }`}
           key={index}
           onMouseEnter={() => {
             clearInterval(this.timer);
@@ -56,7 +56,7 @@ export default class Swiper extends React.PureComponent {
     return (
       <div className="swiper">
         <ul className="swiper__img">{bigImg}</ul>
-        <ul className="swiper__img-control">{samllImg}</ul>
+        <ul className="swiper__img-control">{smallImg}</ul>
       </div>
     );
   }

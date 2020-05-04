@@ -1,0 +1,24 @@
+.admin__container-news-list-li {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  border-bottom: 1px dotted #B7B7B7;
+  margin-top: 5px;
+  padding-bottom: 5px;
+
+  a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #444444;
+  }
+
+  a:hover {
+    color: #dd6401;
+  }
+
+  .admin__container-news-list-time {
+    color: #7d7d7d;
+    font-family: Arial;
+    font-size: 12px;
+  }
+}

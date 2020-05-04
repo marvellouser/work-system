@@ -2,6 +2,10 @@ import React from "react";
 
 export default class Case extends React.PureComponent {
   render() {
-    return <div>工程案例</div>;
+    return (
+      <div className="case">
+        <img src="http://www.kofler.com.cn/images/soon.JPG" alt="近期推出" />
+      </div>
+    );
   }
 }

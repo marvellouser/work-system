@@ -1,0 +1,124 @@
+.about {
+  font-size: 14px;
+  line-height: 24px;
+  &__line {
+    line-height: 0;
+    // width: 680px;
+    padding-left: 10px;
+    img {
+      width: 680px;
+      height: 3px;
+    }
+  }
+  &__slogn {
+    border-bottom: 1px solid #eee;
+    &__img {
+      width: 731px;
+      height: 161px;
+    }
+  }
+  &__title,
+  &__desc {
+    padding: 30px 10px;
+    color: #146abb;
+    font-size: 9pt;
+  }
+  &__desc {
+    // padding: 30px 10px;
+    color: #565656;
+  }
+  &__info {
+    display: flex;
+    padding: 0 10px 40px;
+    &-text {
+      font-size: 12px;
+      color: #565656;
+      padding-right: 43px;
+    }
+  }
+}
+
+.company {
+  &__slogn {
+    border-bottom: 1px solid #eee;
+    &__img {
+      width: 731px;
+      height: 161px;
+    }
+  }
+  &__info {
+    padding: 20px 0 40px;
+    &__line {
+      line-height: 0;
+      // width: 680px;
+      padding-left: 10px;
+      padding-top: 12px;
+      img {
+        width: 680px;
+        height: 3px;
+      }
+    }
+    &__box {
+      &-title {
+        font-size: 12px;
+        font-weight: bold;
+        color: rgb(0, 128, 255);
+        padding: 10px 0;
+      }
+      &-item {
+        padding: 5px 0;
+        font-size: 9pt;
+        color: #565656;
+      }
+    }
+  }
+}
+
+.organization {
+  text-align: center;
+  img {
+    width: 650px;
+    height: 423px;
+  }
+}
+
+.case {
+  text-align: center;
+  img {
+    width: 480px;
+    height: 390px;
+  }
+}
+
+.contact {
+  &__slogn {
+    border-bottom: 1px solid #eee;
+    &__img {
+      width: 731px;
+      height: 161px;
+    }
+  }
+  &__info {
+    padding: 20px 30px;
+    font-size: 12px;
+    > div {
+      padding: 8px 0;
+    }
+    &-title {
+      font-size: 14px;
+      color: #0087c4;
+      font-weight: bold;
+    }
+    &-address {
+      color: #666;
+      font-weight: bold;
+    }
+    &-another {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+}

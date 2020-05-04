@@ -11,7 +11,7 @@ export default class Index extends React.PureComponent {
         <Head {...this.props} />
         <Switch>
           <Route path="/" exact component={Admin} />
-          <Route path="" component={PageList} />
+          <Route path="/" component={PageList} />
         </Switch>
         <div className="footer">
           <div className="footer__con">

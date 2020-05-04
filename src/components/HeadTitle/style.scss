@@ -1,0 +1,12 @@
+.head__title {
+  padding-bottom: 10px;
+  &-title {
+    font-size: 16px;
+    color: #146abb;
+    padding: 6px;
+  }
+  &-line {
+    height: 2px;
+    background-color: #dadbe2;
+  }
+}

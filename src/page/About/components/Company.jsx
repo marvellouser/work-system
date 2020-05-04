@@ -1,27 +1,7 @@
 import React from "react";
+import "./style.scss";
+import InfoBox from "../../../components/InfoBox";
 
-function InfoBox(props) {
-  const { title, items, showLine = true } = props;
-  const info = items.map((item) => (
-    <div className="company__info__box-item" key={item}>
-      {item}
-    </div>
-  ));
-
-  return (
-    <>
-      <div className="company__info__box">
-        <div className="company__info__box-title">{title}公司愿景</div>
-        {info}
-      </div>
-      {showLine && (
-        <div className="company__info__line">
-          <img src="http://www.kofler.com.cn/images/nx3.jpg" alt="" />
-        </div>
-      )}
-    </>
-  );
-}
 export default class Company extends React.PureComponent {
   render() {
     const infoArr = [

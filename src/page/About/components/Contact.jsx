@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.scss";
 
 export default class Contact extends React.PureComponent {
   render() {

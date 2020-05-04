@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.scss";
 
 export default class Case extends React.PureComponent {
   render() {

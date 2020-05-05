@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import Menu from "../../components/Menu/index";
 import Hr from "./components/Hr";
 import Joinus from "./components/Joinus";
-export default class About extends React.PureComponent {
+export default class About extends React.Component {
   render() {
     const menus = [
       {
@@ -26,7 +26,7 @@ export default class About extends React.PureComponent {
         right={() => (
           <div className="human-right">
             <Route path="/human/joinus" component={Joinus} />
-            <Route path="/human/hr" component={Hr} />
+            <Route path="/human/hr/:job?" component={Hr} />
           </div>
         )}
         history={this.props.history}

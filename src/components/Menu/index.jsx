@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./style.scss";
 import PropTypes from "prop-types";
 
-export default class Menu extends React.PureComponent {
+export default class Menu extends React.Component {
   static defaultProps = {
     menus: [],
   };

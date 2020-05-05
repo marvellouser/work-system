@@ -3,7 +3,6 @@ import "./style.scss";
 export default class Layout extends React.PureComponent {
   render() {
     const { left, right, history } = this.props;
-    console.log(history, ".........");
     return (
       <div className="layout">
         <div className="layout__left">

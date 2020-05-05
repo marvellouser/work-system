@@ -20,7 +20,7 @@ export default class Joinus extends React.PureComponent {
         showLine: false,
       },
     ];
-    const info = infoArr.map((info) => <InfoBox {...info} />);
+    const info = infoArr.map((info) => <InfoBox key={info.title} {...info} />);
     return (
       <div className="joinus">
         <HeadTitle title="人力资源" />

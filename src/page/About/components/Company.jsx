@@ -59,6 +59,7 @@ export default class Company extends React.PureComponent {
             alt="关于我们"
           />
         </div>
+
         <div className="company__info">{info}</div>
       </div>
     );

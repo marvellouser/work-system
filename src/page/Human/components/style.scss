@@ -17,4 +17,84 @@
 }
 
 .hr {
+  &__job-tab {
+    margin-top: 10px;
+    &-flex {
+      display: flex;
+      font-size: 12px;
+      color: #666;
+
+      &-bg {
+        background-color: #a4a1a2;
+        color: #fff;
+      }
+      &-name {
+        width: 50%;
+        padding: 6px 0;
+        padding-left: 22px;
+        a {
+          color: #666;
+          font-weight: bold;
+        }
+        a:hover {
+          color: rgb(18, 95, 134);
+        }
+      }
+      &-place,
+      &-date {
+        width: 25%;
+        text-align: center;
+        padding: 6px 0;
+        margin-left: 1px;
+      }
+    }
+    &-item {
+      border-bottom: 1px solid #eee;
+    }
+  }
+  &__job {
+    padding: 0 10px;
+    font-size: 12px;
+    &-table {
+      border: 1px solid #eee;
+      &-tr {
+        display: flex;
+        border-bottom: 1px solid #eee;
+        &-td {
+          padding: 5px 10px;
+          &-treat {
+            margin-bottom: 10px;
+          }
+        }
+        &-left {
+          border-right: 1px solid #eee;
+          width: 30%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+        &-right {
+          width: 70%;
+        }
+      }
+      &-tr:last-of-type {
+        border: none;
+      }
+      &-tr:nth-child(odd) {
+        background-color: rgb(243, 247, 250);
+      }
+      &-head {
+        font-weight: bold;
+        .hr__job-table-tr-left {
+          text-align: left;
+        }
+        .hr__job-table-tr-right {
+          text-align: right;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }

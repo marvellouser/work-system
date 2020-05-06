@@ -3,14 +3,7 @@ import Layout from '../../components/Layout'
 // import "./style.scss";
 import Menu from '../../components/Menu/index'
 import { Route, Redirect } from 'react-router-dom'
-import Products1 from './components/Goods'
-// import Products2 from './components/Products2'
-// import Products3 from './components/Products3'
-// import Products4 from './components/Products4'
-// import Products5 from './components/Products5'
-// import Products6 from './components/Products6'
-// import Products7 from './components/Products7'
-// import Products8 from './components/Products8'
+import Goods from './components/Goods'
 
 export default class About extends React.Component {
   render() {
@@ -68,10 +61,7 @@ export default class About extends React.Component {
               path="/products"
               render={() => <Redirect to="/products/products/0" />}
             />
-            <Route
-              path="/products/products/:num?/:goods?"
-              component={Products1}
-            />
+            <Route path="/products/products/:num?/:goods?" component={Goods} />
           </div>
         )}
         history={this.props.history}

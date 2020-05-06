@@ -3,7 +3,7 @@ import GoodsList from './GoodsList'
 import data from '../data'
 import { Redirect } from 'react-router-dom'
 
-function Products1(props) {
+function Goods(props) {
   const {
     history,
     match: {
@@ -25,4 +25,4 @@ function Products1(props) {
   )
 }
 
-export default Products1
+export default Goods

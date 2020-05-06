@@ -1,9 +1,13 @@
-import React from "react";
-import "./style.scss";
+import React from 'react'
+import './style.scss'
+import HeadTitle from '../../../components/HeadTitle'
+
 export default class About extends React.PureComponent {
   render() {
     return (
       <div className="about">
+        <HeadTitle title="关于科菲勒" />
+
         <div className="about__slogn">
           <img
             className="slogn__img"
@@ -28,7 +32,7 @@ export default class About extends React.PureComponent {
             <p>
               市场是我们思考问题的出发点，客户满意是衡量我们工作的宗旨。我们为服务社会满足客户而来。企业发展的核心在于紧跟时代的步伐，不断地创新，满足客户而来。企业发展的核心在于紧跟时代的步伐，不断地创新，才能永久站在前沿，走在行业前列。
             </p>
-            <p style={{ marginTop: "12px" }}>
+            <p style={{ marginTop: '12px' }}>
               科菲勒电气热忱欢迎新老客户来电、来函、来访洽谈业务。我们衷心希望与国内外各行各业的朋友及同行代理商建立友好的合作关系，同谋发展，共创美好未来。
             </p>
           </div>
@@ -37,6 +41,6 @@ export default class About extends React.PureComponent {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -1,10 +1,12 @@
-import React from "react";
-import "./style.scss";
+import React from 'react'
+import './style.scss'
+import HeadTitle from '../../../components/HeadTitle'
 
 export default class Contact extends React.PureComponent {
   render() {
     return (
       <div className="contact">
+        <HeadTitle title="联系我们" />
         <div className="contact__slogn">
           <img
             className="slogn__img"
@@ -31,6 +33,6 @@ export default class Contact extends React.PureComponent {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

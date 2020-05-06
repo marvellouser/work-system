@@ -7,6 +7,10 @@
   color: #000;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+}
+.tab__active {
+  color: #ff7741;
 }
 .tab__item:hover {
   color: #003894;

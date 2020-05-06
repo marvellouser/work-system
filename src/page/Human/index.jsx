@@ -1,21 +1,21 @@
-import React from "react";
-import Layout from "../../components/Layout";
-import { Route } from "react-router-dom";
-import Menu from "../../components/Menu/index";
-import Hr from "./components/Hr";
-import Joinus from "./components/Joinus";
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Route, Redirect } from 'react-router-dom'
+import Menu from '../../components/Menu/index'
+import Hr from './components/Hr'
+import Joinus from './components/Joinus'
 export default class About extends React.Component {
   render() {
     const menus = [
       {
-        path: "/human/joinus",
-        name: "人力资源",
+        path: '/human/joinus',
+        name: '人力资源',
       },
       {
-        path: "/human/hr",
-        name: "人才招聘",
+        path: '/human/hr',
+        name: '人才招聘',
       },
-    ];
+    ]
     return (
       <Layout
         left={() => (
@@ -25,12 +25,17 @@ export default class About extends React.Component {
         )}
         right={() => (
           <div className="human-right">
+            <Route
+              exact
+              path="/human"
+              render={() => <Redirect to="/human/joinus" />}
+            />
             <Route path="/human/joinus" component={Joinus} />
             <Route path="/human/hr/:job?" component={Hr} />
           </div>
         )}
         history={this.props.history}
       />
-    );
+    )
   }
 }

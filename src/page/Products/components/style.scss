@@ -1,5 +1,7 @@
 .goods {
   width: 170px;
+  cursor: pointer;
+  text-align: center;
   &__img {
     width: 100%;
     img {
@@ -10,5 +12,20 @@
     height: 30px;
     line-height: 30px;
     font-size: 12px;
+    text-decoration: none;
+    color: #666;
+  }
+  &__title:hover {
+    color: rgb(20, 106, 187);
+  }
+}
+
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+  .goods-wrap {
+    flex: 0 0 33%;
+    display: flex;
+    justify-content: center;
   }
 }

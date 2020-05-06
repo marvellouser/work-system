@@ -1,9 +1,14 @@
 import React from 'react'
 import './style.scss'
-function Goods(props) {
-  const { imgUrl, title } = props
+function GoodsCard(props) {
+  const { imgUrl, title, path, history } = props
   return (
-    <div className="goods">
+    <div
+      className="goods"
+      onClick={() => {
+        history.push(path)
+      }}
+    >
       <div className="goods__img">
         <img src={imgUrl} alt="" />
       </div>
@@ -12,14 +17,20 @@ function Goods(props) {
   )
 }
 function GoodsList(props) {
-  return (
-    <div className="goods-list">
-      <Goods
-        imgUrl="http://www.kofler.com.cn/images/siwo.jpg"
-        title="KT-GA系列双电源自动切换开关"
-      />
-    </div>
-  )
+  const { history, goodsList } = props
+  const list =
+    goodsList &&
+    goodsList.map((goods, index) => (
+      <div className="goods-wrap" key={index}>
+        <GoodsCard
+          imgUrl={goods.imgUrl}
+          title={goods.goodsName}
+          path={goods.path}
+          history={history}
+        />
+      </div>
+    ))
+  return <div className="goods-list">{list}</div>
 }
 
 export default GoodsList

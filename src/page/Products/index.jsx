@@ -2,46 +2,58 @@ import React from 'react'
 import Layout from '../../components/Layout'
 // import "./style.scss";
 import Menu from '../../components/Menu/index'
-import GoodsList from './components/GoodsList'
 import { Route, Redirect } from 'react-router-dom'
+import Products1 from './components/Goods'
+// import Products2 from './components/Products2'
+// import Products3 from './components/Products3'
+// import Products4 from './components/Products4'
+// import Products5 from './components/Products5'
+// import Products6 from './components/Products6'
+// import Products7 from './components/Products7'
+// import Products8 from './components/Products8'
+
 export default class About extends React.Component {
   render() {
     const menus = [
       {
-        path: '/products/products1',
+        path: '/products/products/0',
         name: '双电源自动切换开关',
       },
       {
-        path: '/products/products2',
+        path: '/products/products/1',
         name: '控制与保护开关电器',
       },
       {
-        path: '/products/products3',
+        path: '/products/products/2',
         name: '智能数显电力仪表',
       },
       {
-        path: '/products/products4',
+        path: '/products/products/3',
         name: '多功能谐波保护器',
       },
       {
-        path: '/products/products5',
+        path: '/products/products/4',
         name: '负荷隔离开关',
       },
       {
-        path: '/products/products6',
+        path: '/products/products/5',
         name: '小型断路器',
       },
       {
-        path: '/products/products7',
+        path: '/products/products/6',
         name: '塑壳断路器',
       },
       {
-        path: '/products/products8',
+        path: '/products/products/7',
         name: '万能式断路器',
       },
     ]
 
-    console.log(this.props, '..............')
+    const {
+      location: { pathname },
+    } = this.props
+    console.log(pathname)
+
     return (
       <Layout
         left={() => (
@@ -54,10 +66,12 @@ export default class About extends React.Component {
             <Route
               exact
               path="/products"
-              render={() => <Redirect to="/products/products1" />}
+              render={() => <Redirect to="/products/products/0" />}
             />
-            <Redirect to="/products/products1" />
-            <GoodsList />
+            <Route
+              path="/products/products/:num?/:goods?"
+              component={Products1}
+            />
           </div>
         )}
         history={this.props.history}

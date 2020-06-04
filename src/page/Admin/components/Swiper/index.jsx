@@ -37,7 +37,7 @@ export default class Swiper extends React.PureComponent {
         <li
           className={`swiper__img-control-item ${
             imgIndex === index ? "swiper__img-control-item-active" : ""
-            }`}
+          }`}
           key={index}
           onMouseEnter={() => {
             clearInterval(this.timer);
